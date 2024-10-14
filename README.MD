@@ -1,21 +1,24 @@
-Static Website Example
-----------------------
+1/ Clone du static-website-example
 
-To be used with Cloud Academy labs.
+#git clone https://github.com/diranetafen/static-website-example.git
 
+2/Creation du Dockerfile
 
-License
-----------------------
+touch Dockerfile => voir contenu dans le fichier Dockerfile
 
-This static website is based on the Dimension template by [HTML5 UP](https://html5up.net/)
+3/Creation du projet dans jenkins
 
-Creative Commons License
-All of the site templates I create for [HTML5 UP](https://html5up.net/) are licensed under the Creative Commons Attribution 3.0 License, which means you can:
- - Use them for personal stuff
- - Use them for commercial stuff
- - Change them however you like
+![alt text](image.png)
 
+4/Creation de l'item website-projet en mode Freestyle
 
-... all for free, yo. In exchange, just give HTML5 UP credit for the design and tell your friends about it :)
+![alt text](image-1.png)
 
-More info [here](https://html5up.net/license).
+5/ Creation du parametre port
+![alt text](image-2.png)
+
+6/Creation du Jenkinsfile
+#touch Jenkinsfile => voir contenu dans le fichier Jenkinsfile
+
+7/Push et commit dans github local
+
