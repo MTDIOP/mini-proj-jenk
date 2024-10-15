@@ -25,7 +25,7 @@ pipeline {
                  sh '''
                     echo "Run Container"
                     docker run --name $CTN_NAME -d -p ${PORT_EXPOSED}:80 -e PORT=80 ${ID_DOCKER}/$IMAGE_NAME:$IMAGE_TAG
-                    sleep 5
+                    sleep 10
                  '''
                }
             }
@@ -88,8 +88,6 @@ pipeline {
           }
         }
      }
-
-
 
      stage('Push image in production and deploy it') {
        when {
