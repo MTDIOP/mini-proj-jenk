@@ -47,11 +47,11 @@ touch Dockerfile => voir contenu dans le fichier Dockerfile
 
 #LocalHost
 
-[![Build Status](http://localhost:8080/job/static-website/badge/icon)](http://localhost:8080/job/static-website/)
+[![Build Status](http://localhost:8080/job/static-website/badge/icon)]
 
 #Ngrok URL
 
-[![Build Status](https://06cc-37-67-97-149.ngrok-free.app/job/static-website/badge/icon)](https://06cc-37-67-97-149.ngrok-free.app/job/static-website/)
+[![Build Status](https://06cc-37-67-97-149.ngrok-free.app/job/static-website/badge/icon)]
 
 ############## Result after realise the project #################
 
