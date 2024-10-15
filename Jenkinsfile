@@ -3,7 +3,7 @@ pipeline {
        ID_DOCKER ="mortalla"
        PORT_EXPOSED = "${WEB_PORT}"
        IMAGE_NAME = "mdi-staticweb-img"
-	   CTN_NAME = "mdi-staticweb"
+       CTN_NAME = "mdi-staticweb"
        IMAGE_TAG = "latest"
        STAGING = "${ID_DOCKER}-staging"
        PRODUCTION = "${ID_DOCKER}-production"
@@ -23,8 +23,7 @@ pipeline {
             steps {
                script {
                  sh '''
-                    echo "Clean Environment"
-                    docker rm -f $CTN_NAME || echo "container does not exist"
+                    echo "Run Container"
                     docker run --name $CTN_NAME -d -p ${PORT_EXPOSED}:80 -e PORT=80 ${ID_DOCKER}/$IMAGE_NAME:$IMAGE_TAG
                     sleep 5
                  '''
@@ -46,8 +45,9 @@ pipeline {
           steps {
              script {
                sh '''
+                 echo "Clean Environment"
                  docker stop $CTN_NAME
-                 docker rm $CTN_NAME
+                 docker rm -f $CTN_NAME || echo "container does not exist"
                '''
              }
           }
