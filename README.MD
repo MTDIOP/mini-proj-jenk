@@ -1,3 +1,5 @@
+############## Step to realise the project #################
+
 1/ Clone du static-website-example dans mon repertoire Mini-projet
 
 #git clone https://github.com/diranetafen/static-website-example.git
@@ -39,7 +41,18 @@ touch Dockerfile => voir contenu dans le fichier Dockerfile
 ![alt text](image-7.png)
 
 10/Ajout des secrtes file du dockerhub et de heroku_api_key
-
+![alt text](image-8.png)
 
 11/ Ajout de Embeddable Build Status Icon
+
 [![Build Status](http://localhost:8080/job/static-website/badge/icon)](http://localhost:8080/job/static-website/)
+
+############## Result after realise the project #################
+
+Jenkins Build Status
+
+Docker Hub Status
+
+Heroku Status
+
+Github mardown Status
