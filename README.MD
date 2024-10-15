@@ -46,9 +46,11 @@ touch Dockerfile => voir contenu dans le fichier Dockerfile
 11/ Ajout de Embeddable Build Status Icon
 
 #LocalHost
+
 [![Build Status](http://localhost:8080/job/static-website/badge/icon)](http://localhost:8080/job/static-website/)
 
 #Ngrok URL
+
 [![Build Status](https://06cc-37-67-97-149.ngrok-free.app/job/static-website/badge/icon)](https://06cc-37-67-97-149.ngrok-free.app/job/static-website/)
 
 ############## Result after realise the project #################
