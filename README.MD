@@ -37,3 +37,9 @@ touch Dockerfile => voir contenu dans le fichier Dockerfile
 
 9/Definition du script Pipeline
 ![alt text](image-7.png)
+
+10/Ajout des secrtes file du dockerhub et de heroku_api_key
+
+
+11/ Ajout de Embeddable Build Status Icon
+[![Build Status](http://localhost:8080/job/static-website/badge/icon)](http://localhost:8080/job/static-website/)
