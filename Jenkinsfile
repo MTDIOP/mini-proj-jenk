@@ -25,7 +25,7 @@ pipeline {
                  sh '''
                     echo "Run Container"
                     docker run --name $CTN_NAME -d -p ${PORT_EXPOSED}:80 -e PORT=80 ${ID_DOCKER}/$IMAGE_NAME:$IMAGE_TAG
-                    sleep 10
+                    sleep 5
                  '''
                }
             }
@@ -62,7 +62,7 @@ pipeline {
           steps {
              script {
                sh '''
-                   echo $DOCKERHUB_PASSWORD | docker login -u $ID_DOCKER --password-stdin https://index.docker.io/v2/
+                   echo $DOCKERHUB_PASSWORD | docker login -u $ID_DOCKER --password-stdin https://hub.docker.com/
                    docker push ${ID_DOCKER}/$IMAGE_NAME:$IMAGE_TAG
                '''
              }
