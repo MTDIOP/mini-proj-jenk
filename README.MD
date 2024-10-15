@@ -45,7 +45,7 @@ touch Dockerfile => voir contenu dans le fichier Dockerfile
 
 11/ Ajout de Embeddable Build Status Icon
 
-[![Build Status](http://localhost:8080/job/static-website/badge/icon)](http://localhost:8080/job/static-website/)
+http://localhost:8080/job/static-website/badge/icon
 
 ############## Result after realise the project #################
 
