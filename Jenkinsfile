@@ -82,11 +82,12 @@ pipeline {
 //              npm i -g heroku@7.68.0
           script {
             sh '''
-              npm i -g heroku@9.3.1
-              heroku container:login
-              heroku create $STAGING || echo "project already exist"
-              heroku container:push -a $STAGING web
-              heroku container:release -a $STAGING web
+               apk --no-cache add npm
+               npm install -g heroku
+               heroku container:login
+               heroku create $PRODUCTION || echo "projets already exist"
+               heroku container:push -a $PRODUCTION web
+               heroku container:release -a $PRODUCTION web
             '''
           }
         }
@@ -103,7 +104,8 @@ pipeline {
       steps {
           script {
             sh '''
-              npm i -g heroku@7.68.0
+              apk --no-cache add npm
+              npm install -g heroku
               heroku container:login
               heroku create $PRODUCTION || echo "project already exist"
               heroku container:push -a $PRODUCTION web
