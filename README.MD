@@ -53,6 +53,8 @@ touch Dockerfile => voir contenu dans le fichier Dockerfile
 
 https://06cc-37-67-97-149.ngrok-free.app/job/static-website/badge/icon)](https://06cc-37-67-97-149.ngrok-free.app/job/static-website/)
 
+12/Add Slack Notif
+
 ############## Result after realise the project #################
 
 Jenkins Build Status
@@ -62,3 +64,5 @@ Docker Hub Status
 Heroku Status
 
 Github mardown Status
+
+Slack Message

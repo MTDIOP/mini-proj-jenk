@@ -69,7 +69,7 @@ pipeline {
              }
           }
       }    
-     
+/*   heroku seems to not working and deprecated  
      stage('Push image in staging and deploy it') {
        when {
               expression { GIT_BRANCH == 'origin/master' }
@@ -91,7 +91,7 @@ pipeline {
           }
         }
      }
-
+# heroku seems to not working and deprecated  
      stage('Push image in production and deploy it') {
        when {
               expression { GIT_BRANCH == 'origin/production' }
@@ -112,5 +112,14 @@ pipeline {
           }
         }
      }
+*/
   }
+    post {
+       success {
+         slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+         }
+      failure {
+            slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+          }   
+    }
 }
